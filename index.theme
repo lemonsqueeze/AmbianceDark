@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=AmbianceDark
+Comment=Ubuntu Dark Ambiance theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=AmbianceDark
+MetacityTheme=AmbianceDark
+IconTheme=ubuntu-mono-dark
+CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:

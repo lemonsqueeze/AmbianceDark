@@ -1,0 +1,40 @@
+# ==============================================================================
+# MATE NOTIFICATION DAEMON SPECIFIC SETTINGS
+# ==============================================================================
+
+# Note: Needs patched mate-notification-daemon to work. add
+#     gtk_widget_set_name(GTK_WINDOW(win), "Notification");
+#   after gtk_window_set_title() in src/themes/slider/theme.c
+#   (or other theme you're using)
+
+
+# from Ambiance
+style "notification_light_style" {
+
+        bg[NORMAL]        = "#f2f1f0"
+        bg[PRELIGHT]      = shade (1.02, "#f2f1f0")
+        bg[SELECTED]      = "#f07746"
+        bg[INSENSITIVE]   = shade (0.95, "#f2f1f0")
+        bg[ACTIVE]        = shade (0.9, "#f2f1f0")
+
+        fg[NORMAL]        = "#3c3c3c"
+        fg[PRELIGHT]      = "#3c3c3c"
+        fg[SELECTED]      = "#ffffff"
+        fg[INSENSITIVE]   = darker ("#f2f1f0")
+        fg[ACTIVE]        = "#3c3c3c"
+
+        text[NORMAL]      = "#3c3c3c"
+        text[PRELIGHT]    = "#3c3c3c"
+        text[SELECTED]    = "#ffffff"
+        text[INSENSITIVE] = shade (0.8, "#f2f1f0")
+        text[ACTIVE]      = darker ("#3c3c3c")
+
+        base[NORMAL]      = "#ffffff"
+        base[PRELIGHT]    = shade (0.98, "#f2f1f0")
+        base[SELECTED]    = "#f07746"
+        base[INSENSITIVE] = shade (0.97, "#f2f1f0")
+        base[ACTIVE]      = shade (0.94, "#f2f1f0")
+}
+
+widget       "Notification" style "notification_light_style"
+widget       "Notification.*" style "notification_light_style"
